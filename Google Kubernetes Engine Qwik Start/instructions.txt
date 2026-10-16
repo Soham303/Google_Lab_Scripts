@@ -1,0 +1,25 @@
+Lab Name: Google Kubernetes Engine: Qwik Start
+Lab Code: GSP100
+Script: gsp100.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell from your active lab session.
+
+2. Run the script:
+   bash gsp100.sh
+
+   (Or specify your assigned zone directly):
+   ZONE=us-central1-a bash gsp100.sh
+
+3. The script will:
+   - Configure compute zone
+   - Create Kubernetes cluster `lab-cluster`
+   - Retrieve cluster credentials
+   - Deploy `hello-server` (`gcr.io/google-samples/hello-app:1.0`)
+   - Expose the deployment on port 8080 with a LoadBalancer service
+   - Clean up by deleting the cluster (completing the last checkpoint of this lab)
+
+4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.

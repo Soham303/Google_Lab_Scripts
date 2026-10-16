@@ -23,6 +23,7 @@ Lab Name/
 | 6 | [Cloud Storage: Qwik Start - CLI/SDK](./Cloud%20Storage%20Qwik%20Start%20-%20CLI%20SDK) | `gsp074.sh` | [instructions.txt](./Cloud%20Storage%20Qwik%20Start%20-%20CLI%20SDK/instructions.txt) |
 | 7 | [Multiple VPC Networks](./Multiple%20VPC%20Networks) | `gsp211.sh` | [instructions.txt](./Multiple%20VPC%20Networks/instructions.txt) |
 | 8 | [Implement Private Google Access and Cloud NAT](./Implement%20Private%20Google%20Access%20and%20Cloud%20NAT) | `gsp214.sh` | [instructions.txt](./Implement%20Private%20Google%20Access%20and%20Cloud%20NAT/instructions.txt) |
+| 9 | [Google Kubernetes Engine: Qwik Start](./Google%20Kubernetes%20Engine%20Qwik%20Start) | `gsp100.sh` | [instructions.txt](./Google%20Kubernetes%20Engine%20Qwik%20Start/instructions.txt) |
 
 ## General Usage Guide
 
