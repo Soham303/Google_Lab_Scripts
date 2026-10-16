@@ -12,12 +12,12 @@ RESET=$(tput sgr0)
 echo "${CYAN}${BOLD}=== Starting Lab: User Authentication: Identity-Aware Proxy (GSP499) ===${RESET}"
 
 PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
-REGION=${REGION:-$(gcloud compute project-info describe --format="value(commonInstanceMetadata.items[google-compute-default-region])" 2>/dev/null)}
 if [ -z "$REGION" ]; then
-    REGION=$(gcloud config get-value compute/region 2>/dev/null)
-fi
-if [ -z "$REGION" ]; then
-    REGION="us-central"
+    DEFAULT_R=$(gcloud compute project-info describe --format="value(commonInstanceMetadata.items[google-compute-default-region])" 2>/dev/null)
+    DEFAULT_R=${DEFAULT_R:-$(gcloud config get-value compute/region 2>/dev/null)}
+    DEFAULT_R=${DEFAULT_R:-us-central}
+    read -p "Enter App Engine Region (default: $DEFAULT_R): " input_r
+    REGION=${input_r:-$DEFAULT_R}
 fi
 
 echo "${YELLOW}Project ID:${RESET} $PROJECT_ID"

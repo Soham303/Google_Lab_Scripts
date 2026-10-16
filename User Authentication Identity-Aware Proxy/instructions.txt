@@ -11,10 +11,12 @@ Run Instructions:
 2. Start a tmux session:
    tmux new -s lab
 
-3. Run the script:
+3. Run the script dynamically:
+
+   Method A - Interactive (Prompted for App Engine region, or press Enter for default):
    bash gsp499.sh
 
-   (Or specify your lab's assigned region directly):
+   Method B - Environment Variable (Pre-set App Engine region inline):
    REGION=us-central bash gsp499.sh
 
 4. The script will:
