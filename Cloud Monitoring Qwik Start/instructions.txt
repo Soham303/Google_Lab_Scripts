@@ -1,0 +1,25 @@
+Lab Name: Cloud Monitoring: Qwik Start
+Lab Code: GSP089
+Script: gsp089.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell in your active lab session.
+
+2. Run the script:
+   bash gsp089.sh
+
+   (Or specify your lab's assigned zone directly):
+   ZONE=us-central1-a bash gsp089.sh
+
+3. The script will:
+   - Enable OS Config and Cloud Monitoring APIs
+   - Provision `lamp-1-vm` with Apache and PHP installed
+   - Configure HTTP ingress firewall rule
+   - Establish an HTTP Uptime Check targeting `lamp-1-vm`
+   - Create an email notification channel with your active account
+   - Create an alerting policy for VM network traffic metrics
+
+4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
