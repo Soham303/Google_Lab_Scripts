@@ -8,16 +8,21 @@ Run Instructions:
 
 1. Open Google Cloud Shell from your active lab session.
 
-2. Run the script:
+2. Start a tmux session:
+   tmux new -s lab
+
+3. Run the script dynamically:
+
+   Method A - Interactive (Prompted for your lab's assigned zones, or press Enter for defaults):
    bash gsp075.sh
 
-   (Or specify your lab's assigned US and EU zones):
+   Method B - Environment Variables (Pre-set your lab's US and Europe zones inline):
    ZONE_1=us-central1-a ZONE_2=europe-west1-d bash gsp075.sh
 
-3. The script will:
+4. The script will:
    - Generate all required Terraform root and module manifests (`provider.tf`, `variables.tf`, `mynetwork.tf`, `instance/main.tf`)
    - Initialize the Google Cloud Terraform provider
    - Provision VPC network `mynetwork` and its firewall rules
    - Deploy VM instances `mynet-us-vm` and `mynet-eu-vm` automatically via reusable Terraform modules
 
-4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
+5. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.

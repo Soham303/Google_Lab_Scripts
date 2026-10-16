@@ -12,11 +12,18 @@ RESET=$(tput sgr0)
 echo "${CYAN}${BOLD}=== Starting Lab: Automating Infrastructure on Google Cloud with Terraform (GSP075) ===${RESET}"
 
 PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
-ZONE_1=${ZONE_1:-$(gcloud config get-value compute/zone 2>/dev/null)}
+
 if [ -z "$ZONE_1" ]; then
-    ZONE_1="us-central1-a"
+    DEFAULT_Z1=$(gcloud config get-value compute/zone 2>/dev/null)
+    DEFAULT_Z1=${DEFAULT_Z1:-us-central1-a}
+    read -p "Enter US Zone (default: $DEFAULT_Z1): " input_z1
+    ZONE_1=${input_z1:-$DEFAULT_Z1}
 fi
-ZONE_2=${ZONE_2:-"europe-west1-d"}
+
+if [ -z "$ZONE_2" ]; then
+    read -p "Enter Europe Zone (default: europe-west1-d): " input_z2
+    ZONE_2=${input_z2:-europe-west1-d}
+fi
 
 echo "${YELLOW}Project ID:${RESET} $PROJECT_ID"
 echo "${YELLOW}US Zone:${RESET} $ZONE_1"
