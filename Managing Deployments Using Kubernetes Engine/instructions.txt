@@ -1,0 +1,32 @@
+Lab Name: Managing Deployments Using Kubernetes Engine
+Lab Code: GSP053
+Script: gsp053.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell in your active lab session.
+
+2. Start a tmux session:
+   tmux new -s lab
+
+3. Run the script:
+   bash gsp053.sh
+
+   (Or specify your assigned zone directly):
+   ZONE=us-central1-a bash gsp053.sh
+
+4. The script will:
+   - Download the Kubernetes orchestration manifest assets
+   - Provision GKE cluster `bootcamp`
+   - Deploy `auth`, `hello`, and `frontend` microservices
+   - Configure secrets, configmaps, and load balancer services
+   - Test scaling deployments up and down
+   - Perform a rolling update and rollback
+   - Implement canary release deployments
+
+5. If Cloud Shell disconnects:
+   tmux attach -t lab
+
+6. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
