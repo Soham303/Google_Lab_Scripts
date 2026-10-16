@@ -22,6 +22,7 @@ Lab Name/
 | 5 | [Cloud IAM: Qwik Start](./Cloud%20IAM%20Qwik%20Start) | `gsp064.sh` | [instructions.txt](./Cloud%20IAM%20Qwik%20Start/instructions.txt) |
 | 6 | [Cloud Storage: Qwik Start - CLI/SDK](./Cloud%20Storage%20Qwik%20Start%20-%20CLI%20SDK) | `gsp074.sh` | [instructions.txt](./Cloud%20Storage%20Qwik%20Start%20-%20CLI%20SDK/instructions.txt) |
 | 7 | [Multiple VPC Networks](./Multiple%20VPC%20Networks) | `gsp211.sh` | [instructions.txt](./Multiple%20VPC%20Networks/instructions.txt) |
+| 8 | [Implement Private Google Access and Cloud NAT](./Implement%20Private%20Google%20Access%20and%20Cloud%20NAT) | `gsp214.sh` | [instructions.txt](./Implement%20Private%20Google%20Access%20and%20Cloud%20NAT/instructions.txt) |
 
 ## General Usage Guide
 

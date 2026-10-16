@@ -1,0 +1,25 @@
+Lab Name: Implement Private Google Access and Cloud NAT
+Lab Code: GSP214
+Script: gsp214.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell from your active lab session.
+
+2. Run the script:
+   bash gsp214.sh
+
+   (Or specify your lab's assigned zone directly):
+   ZONE=us-central1-c bash gsp214.sh
+
+3. The script will:
+   - Create custom VPC `privatenet` and subnet `privatenet-us`
+   - Create firewall rule allowing SSH through Identity-Aware Proxy (IAP)
+   - Deploy `vm-internal` without external IP
+   - Create Cloud Storage bucket and copy test objects
+   - Enable Private Google Access on `privatenet-us`
+   - Configure Cloud Router (`nat-router`) and Cloud NAT (`nat-config`) for egress connectivity
+
+4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
