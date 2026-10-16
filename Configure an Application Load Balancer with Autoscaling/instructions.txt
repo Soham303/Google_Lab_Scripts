@@ -1,0 +1,19 @@
+Lab Name: Configure an Application Load Balancer with Autoscaling
+Script: ocbl105_v2.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Upload `ocbl105_v2.sh` to Google Cloud Shell (or create it using `nano ocbl105_v2.sh` / `curl` / `wget`).
+
+2. Start a tmux session so the lab continues running even if Cloud Shell disconnects:
+   tmux new -s lab
+
+3. Set your lab's assigned regions/zones (replace variables if your lab prompt specifies different ones):
+   R1=us-east4 Z1=us-east4-b R2=asia-east1 ZS=us-east1-b bash ocbl105_v2.sh 2>&1 | tee lab.log
+
+4. If Cloud Shell disconnects at any point, reopen Cloud Shell and reattach:
+   tmux attach -t lab
+
+5. When the terminal prints "ALL DONE", click "Check my progress" on each task in the lab, then click "End Lab".
