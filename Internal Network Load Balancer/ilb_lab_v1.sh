@@ -3,13 +3,36 @@
 # Run inside tmux:  tmux new -s lab   then   bash ilb_lab_v1.sh 2>&1 | tee ilb.log
 # Override regions if your lab differs, e.g.:  REGION=us-east4 bash ilb_lab_v1.sh
 PROJECT=$(gcloud config get-value project 2>/dev/null)
-REGION=${REGION:-us-east4}
-ZONE_UTIL=${ZONE_UTIL:-us-east4-a}
-ZONE_IG1=${ZONE_IG1:-us-east4-b}
-ZONE_IG2=${ZONE_IG2:-us-east4-c}
-NET=my-internal-app
-ILB_IP=10.10.30.5
-UTIL_IP=10.10.20.50
+echo "Current Project: $PROJECT"
+
+# Dynamic Parameter Inputs (uses env vars if set, otherwise prompts interactively with defaults)
+if [ -z "$REGION" ]; then
+  DEFAULT_R=$(gcloud compute project-info describe --format="value(commonInstanceMetadata.items[google-compute-default-region])" 2>/dev/null)
+  DEFAULT_R=${DEFAULT_R:-us-east4}
+  read -p "Enter Region (default: $DEFAULT_R): " input_r
+  REGION=${input_r:-$DEFAULT_R}
+fi
+if [ -z "$ZONE_UTIL" ]; then
+  read -p "Enter Utility VM Zone (default: ${REGION}-a): " input_zu
+  ZONE_UTIL=${input_zu:-${REGION}-a}
+fi
+if [ -z "$ZONE_IG1" ]; then
+  read -p "Enter Instance Group 1 Zone (default: ${REGION}-b): " input_z1
+  ZONE_IG1=${input_z1:-${REGION}-b}
+fi
+if [ -z "$ZONE_IG2" ]; then
+  read -p "Enter Instance Group 2 Zone (default: ${REGION}-c): " input_z2
+  ZONE_IG2=${input_z2:-${REGION}-c}
+fi
+if [ -z "$NET" ]; then
+  read -p "Enter Network Name (default: my-internal-app): " input_net
+  NET=${input_net:-my-internal-app}
+fi
+
+ILB_IP=${ILB_IP:-10.10.30.5}
+UTIL_IP=${UTIL_IP:-10.10.20.50}
+
+echo "Using parameters: REGION=$REGION ZONE_UTIL=$ZONE_UTIL ZONE_IG1=$ZONE_IG1 ZONE_IG2=$ZONE_IG2 NET=$NET ILB_IP=$ILB_IP"
  
 say(){ echo; echo "=== $(date +%T) $* ==="; }
 has(){ "$@" >/dev/null 2>&1; }

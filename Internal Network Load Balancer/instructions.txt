@@ -5,16 +5,18 @@ Script: ilb_lab_v1.sh
 Run Instructions:
 ==================================================
 
-1. Upload `ilb_lab_v1.sh` to Google Cloud Shell (or paste it into a file).
+1. Upload `ilb_lab_v1.sh` to Google Cloud Shell.
 
 2. Start a tmux session so the lab survives any network disconnects:
    tmux new -s lab
 
-3. Run the script:
+3. Run the script dynamically:
+
+   Method A - Interactive (Prompts for your lab's assigned region, zones, and network, or press Enter for defaults):
    bash ilb_lab_v1.sh 2>&1 | tee ilb.log
 
-   (Or override regions/zones if your lab assigns different ones):
-   REGION=us-east4 ZONE_UTIL=us-east4-a ZONE_IG1=us-east4-b ZONE_IG2=us-east4-c bash ilb_lab_v1.sh 2>&1 | tee ilb.log
+   Method B - Environment Variables (Pre-set your lab's specific parameters inline):
+   REGION=us-east4 ZONE_UTIL=us-east4-a ZONE_IG1=us-east4-b ZONE_IG2=us-east4-c NET=my-internal-app bash ilb_lab_v1.sh 2>&1 | tee ilb.log
 
 4. If Cloud Shell disconnects at any point, reopen it and run:
    tmux attach -t lab
@@ -35,6 +37,7 @@ What the Script Does:
 Key Features:
 ==================================================
 
+- Fully Dynamic: Accepts parameters inline or prompts interactively with smart defaults.
 - Idempotent: Every step checks for existing resources before creating them, making it safe to re-run.
 - Retries: Automatically retries transient errors 3 times before stopping.
 - Zero SSH Dependency: Uses VM resets and serial port outputs, eliminating SSH key generation delays or connection dropouts.
