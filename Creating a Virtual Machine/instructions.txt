@@ -1,0 +1,23 @@
+Lab Name: Creating a Virtual Machine
+Lab Code: GSP001
+Script: gsp001.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell in your active lab session.
+
+2. Run the script:
+   bash gsp001.sh
+
+   (Or specify your assigned lab zone directly):
+   ZONE=us-central1-a bash gsp001.sh
+
+3. The script will automatically:
+   - Create VM instance `gcelab` with Nginx web server installed
+   - Create firewall rule `allow-http` for port 80
+   - Create the second VM instance `gcelab2`
+   - Verify Nginx service status
+
+4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.

@@ -17,6 +17,7 @@ Lab Name/
 |---|---|---|---|
 | 1 | [Configure an Application Load Balancer with Autoscaling](./Configure%20an%20Application%20Load%20Balancer%20with%20Autoscaling) | `ocbl105_v2.sh` | [instructions.txt](./Configure%20an%20Application%20Load%20Balancer%20with%20Autoscaling/instructions.txt) |
 | 2 | [A Tour of Google Cloud Hands-on Labs](./A%20Tour%20of%20Google%20Cloud%20Hands-on%20Labs) | `gsp282.sh` | [instructions.txt](./A%20Tour%20of%20Google%20Cloud%20Hands-on%20Labs/instructions.txt) |
+| 3 | [Creating a Virtual Machine](./Creating%20a%20Virtual%20Machine) | `gsp001.sh` | [instructions.txt](./Creating%20a%20Virtual%20Machine/instructions.txt) |
 
 ## General Usage Guide
 
