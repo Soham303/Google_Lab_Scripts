@@ -31,6 +31,7 @@ Lab Name/
 | 14 | [Application Load Balancer with Cloud Armor](./Application%20Load%20Balancer%20with%20Cloud%20Armor) | `gsp215.sh` | [instructions.txt](./Application%20Load%20Balancer%20with%20Cloud%20Armor/instructions.txt) |
 | 15 | [User Authentication: Identity-Aware Proxy](./User%20Authentication%20Identity-Aware%20Proxy) | `gsp499.sh` | [instructions.txt](./User%20Authentication%20Identity-Aware%20Proxy/instructions.txt) |
 | 16 | [Working with Cloud Build](./Working%20with%20Cloud%20Build) | `gsp107.sh` | [instructions.txt](./Working%20with%20Cloud%20Build/instructions.txt) |
+| 17 | [Cloud SQL for MySQL: Qwik Start](./Cloud%20SQL%20for%20MySQL%20Qwik%20Start) | `gsp151.sh` | [instructions.txt](./Cloud%20SQL%20for%20MySQL%20Qwik%20Start/instructions.txt) |
 
 ## General Usage Guide
 

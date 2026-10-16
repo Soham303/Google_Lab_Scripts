@@ -1,0 +1,27 @@
+Lab Name: Cloud SQL for MySQL: Qwik Start
+Lab Code: GSP151
+Script: gsp151.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell from your active lab session.
+
+2. Start a tmux session (Cloud SQL provisioning takes ~3-5 mins):
+   tmux new -s lab
+
+3. Run the script:
+   bash gsp151.sh
+
+   (Or specify your lab's assigned region directly):
+   REGION=us-central1 bash gsp151.sh
+
+4. The script will:
+   - Provision Cloud SQL MySQL 8.0 instance `myinstance`
+   - Create the `guestbook` database inside `myinstance`
+
+5. If disconnected:
+   tmux attach -t lab
+
+6. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
