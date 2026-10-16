@@ -1,0 +1,25 @@
+Lab Name: Working with Cloud Build
+Lab Code: GSP107
+Script: gsp107.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell from your active lab session.
+
+2. Run the script:
+   bash gsp107.sh
+
+   (Or pass your assigned region directly):
+   REGION=us-central1 bash gsp107.sh
+
+3. The script will:
+   - Enable Cloud Build and Artifact Registry APIs
+   - Create Docker source files (`quickstart.sh`, `Dockerfile`)
+   - Create a Docker format Artifact Registry repository (`quickstart-docker-repo`)
+   - Submit container builds via `gcloud builds submit --tag`
+   - Build containers declaratively using `cloudbuild.yaml` build configurations
+   - Execute and test custom build steps
+
+4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
