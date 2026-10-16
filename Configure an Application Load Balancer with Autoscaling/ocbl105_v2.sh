@@ -2,9 +2,27 @@
 # OCBL105 FINAL: idempotent (safe to re-run), retries transient errors, no SSH needed.
 # Run inside tmux:  tmux new -s lab   then   bash lab_final.sh 2>&1 | tee lab.log
 PROJECT=$(gcloud config get-value project 2>/dev/null)
-R1=${R1:-us-east1}; Z1=${Z1:-us-east1-d}
-R2=${R2:-asia-southeast1}
-ZS=${ZS:-us-east4-a}
+echo "Current Project: $PROJECT"
+
+# Dynamic Region and Zone inputs (uses env vars if passed, prompts interactively with defaults otherwise)
+if [ -z "$R1" ]; then
+  read -p "Enter Region 1 (default: us-east1): " input_r1
+  R1=${input_r1:-us-east1}
+fi
+if [ -z "$Z1" ]; then
+  read -p "Enter Zone 1 (default: ${R1}-d): " input_z1
+  Z1=${input_z1:-${R1}-d}
+fi
+if [ -z "$R2" ]; then
+  read -p "Enter Region 2 (default: asia-southeast1): " input_r2
+  R2=${input_r2:-asia-southeast1}
+fi
+if [ -z "$ZS" ]; then
+  read -p "Enter Stress Test Zone (default: us-east4-a): " input_zs
+  ZS=${input_zs:-us-east4-a}
+fi
+echo "Using parameters: R1=$R1 Z1=$Z1 R2=$R2 ZS=$ZS"
+
 say(){ echo; echo "=== $(date +%T) $* ==="; }
 has(){ "$@" >/dev/null 2>&1; }
 retry(){ for i in 1 2 3; do "$@" && return 0; echo "  (attempt $i failed, retrying in 10s)"; sleep 10; done; echo "FAILED: $*"; return 1; }
