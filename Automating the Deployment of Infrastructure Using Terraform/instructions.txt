@@ -1,0 +1,23 @@
+Lab Name: Automating the Deployment of Infrastructure Using Terraform
+Lab Code: GSP075
+Script: gsp075.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell from your active lab session.
+
+2. Run the script:
+   bash gsp075.sh
+
+   (Or specify your lab's assigned US and EU zones):
+   ZONE_1=us-central1-a ZONE_2=europe-west1-d bash gsp075.sh
+
+3. The script will:
+   - Generate all required Terraform root and module manifests (`provider.tf`, `variables.tf`, `mynetwork.tf`, `instance/main.tf`)
+   - Initialize the Google Cloud Terraform provider
+   - Provision VPC network `mynetwork` and its firewall rules
+   - Deploy VM instances `mynet-us-vm` and `mynet-eu-vm` automatically via reusable Terraform modules
+
+4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
