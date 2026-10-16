@@ -16,6 +16,7 @@ Lab Name/
 | # | Lab Title | Script | Instructions |
 |---|---|---|---|
 | 1 | [Configure an Application Load Balancer with Autoscaling](./Configure%20an%20Application%20Load%20Balancer%20with%20Autoscaling) | `ocbl105_v2.sh` | [instructions.txt](./Configure%20an%20Application%20Load%20Balancer%20with%20Autoscaling/instructions.txt) |
+| 2 | [A Tour of Google Cloud Hands-on Labs](./A%20Tour%20of%20Google%20Cloud%20Hands-on%20Labs) | `gsp282.sh` | [instructions.txt](./A%20Tour%20of%20Google%20Cloud%20Hands-on%20Labs/instructions.txt) |
 
 ## General Usage Guide
 

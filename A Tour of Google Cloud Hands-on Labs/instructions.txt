@@ -1,0 +1,21 @@
+Lab Name: A Tour of Google Cloud Hands-on Labs
+Lab Code: GSP282
+Script: gsp282.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell from your lab session.
+
+2. Run the script:
+   bash gsp282.sh
+
+   (Or pass Username 2 directly from your lab credentials):
+   USER_2="student-xx-xxxx@qwiklabs.net" bash gsp282.sh
+
+3. The script will:
+   - Assign the Viewer role to Username 2
+   - Enable the Dialogflow API
+
+4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
