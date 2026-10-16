@@ -1,0 +1,24 @@
+Lab Name: Cloud Storage: Qwik Start - CLI/SDK
+Lab Code: GSP074
+Script: gsp074.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell in your active lab session.
+
+2. Run the script:
+   bash gsp074.sh
+
+   (Or specify your lab's assigned region):
+   REGION=us-east1 bash gsp074.sh
+
+3. The script will:
+   - Create a Cloud Storage bucket named after your project ID
+   - Download the Ada Lovelace sample portrait
+   - Upload it to your bucket
+   - Copy it locally and into a subfolder (`image-folder/`) within the bucket
+   - Set public read permissions (`AllUsers:R`) on the object
+
+4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.

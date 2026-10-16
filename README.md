@@ -20,6 +20,7 @@ Lab Name/
 | 3 | [Creating a Virtual Machine](./Creating%20a%20Virtual%20Machine) | `gsp001.sh` | [instructions.txt](./Creating%20a%20Virtual%20Machine/instructions.txt) |
 | 4 | [Getting Started with Cloud Shell and gcloud](./Getting%20Started%20with%20Cloud%20Shell%20and%20gcloud) | `gsp002.sh` | [instructions.txt](./Getting%20Started%20with%20Cloud%20Shell%20and%20gcloud/instructions.txt) |
 | 5 | [Cloud IAM: Qwik Start](./Cloud%20IAM%20Qwik%20Start) | `gsp064.sh` | [instructions.txt](./Cloud%20IAM%20Qwik%20Start/instructions.txt) |
+| 6 | [Cloud Storage: Qwik Start - CLI/SDK](./Cloud%20Storage%20Qwik%20Start%20-%20CLI%20SDK) | `gsp074.sh` | [instructions.txt](./Cloud%20Storage%20Qwik%20Start%20-%20CLI%20SDK/instructions.txt) |
 
 ## General Usage Guide
 
