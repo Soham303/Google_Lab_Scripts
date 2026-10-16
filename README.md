@@ -19,6 +19,7 @@ Lab Name/
 | 2 | [A Tour of Google Cloud Hands-on Labs](./A%20Tour%20of%20Google%20Cloud%20Hands-on%20Labs) | `gsp282.sh` | [instructions.txt](./A%20Tour%20of%20Google%20Cloud%20Hands-on%20Labs/instructions.txt) |
 | 3 | [Creating a Virtual Machine](./Creating%20a%20Virtual%20Machine) | `gsp001.sh` | [instructions.txt](./Creating%20a%20Virtual%20Machine/instructions.txt) |
 | 4 | [Getting Started with Cloud Shell and gcloud](./Getting%20Started%20with%20Cloud%20Shell%20and%20gcloud) | `gsp002.sh` | [instructions.txt](./Getting%20Started%20with%20Cloud%20Shell%20and%20gcloud/instructions.txt) |
+| 5 | [Cloud IAM: Qwik Start](./Cloud%20IAM%20Qwik%20Start) | `gsp064.sh` | [instructions.txt](./Cloud%20IAM%20Qwik%20Start/instructions.txt) |
 
 ## General Usage Guide
 

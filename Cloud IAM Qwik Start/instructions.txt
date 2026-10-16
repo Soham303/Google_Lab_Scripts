@@ -1,0 +1,22 @@
+Lab Name: Cloud IAM: Qwik Start
+Lab Code: GSP064
+Script: gsp064.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell from your active lab session.
+
+2. Run the script:
+   bash gsp064.sh
+
+   (Or supply Username 2 directly from your lab credentials):
+   USER_2="student-xx-xxxx@qwiklabs.net" bash gsp064.sh
+
+3. The script will:
+   - Create a Cloud Storage bucket named after your project
+   - Upload a sample file to the bucket
+   - Update IAM policies: remove the Viewer role from Username 2 and grant the Storage Object Viewer role instead
+
+4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
