@@ -24,6 +24,7 @@ Lab Name/
 | 7 | [Multiple VPC Networks](./Multiple%20VPC%20Networks) | `gsp211.sh` | [instructions.txt](./Multiple%20VPC%20Networks/instructions.txt) |
 | 8 | [Implement Private Google Access and Cloud NAT](./Implement%20Private%20Google%20Access%20and%20Cloud%20NAT) | `gsp214.sh` | [instructions.txt](./Implement%20Private%20Google%20Access%20and%20Cloud%20NAT/instructions.txt) |
 | 9 | [Google Kubernetes Engine: Qwik Start](./Google%20Kubernetes%20Engine%20Qwik%20Start) | `gsp100.sh` | [instructions.txt](./Google%20Kubernetes%20Engine%20Qwik%20Start/instructions.txt) |
+| 10 | [Deploying GKE Autopilot Clusters from Cloud Shell](./Deploying%20GKE%20Autopilot%20Clusters%20from%20Cloud%20Shell) | `gsp101.sh` | [instructions.txt](./Deploying%20GKE%20Autopilot%20Clusters%20from%20Cloud%20Shell/instructions.txt) |
 
 ## General Usage Guide
 

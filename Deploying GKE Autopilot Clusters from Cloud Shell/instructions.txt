@@ -1,0 +1,31 @@
+Lab Name: Deploying GKE Autopilot Clusters from Cloud Shell
+Lab Code: GSP101
+Script: gsp101.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell from your active lab session.
+
+2. Start a tmux session (GKE Autopilot creation takes 5-8 minutes):
+   tmux new -s lab
+
+3. Run the script:
+   bash gsp101.sh
+
+   (Or specify your lab's assigned region directly):
+   REGION=us-central1 bash gsp101.sh
+
+4. The script will:
+   - Create the GKE Autopilot cluster `autopilot-cluster-1`
+   - Retrieve cluster credentials
+   - Create `nginx-1` deployment
+   - Generate and copy `test.html` directly into the pod
+   - Expose the pod with a LoadBalancer service
+   - Deploy `new-nginx` pod via Kubernetes YAML manifest
+
+5. If your connection drops, reattach with:
+   tmux attach -t lab
+
+6. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
