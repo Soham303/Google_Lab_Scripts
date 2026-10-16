@@ -12,8 +12,12 @@ RESET=$(tput sgr0)
 echo "${CYAN}${BOLD}=== Starting Lab: Cloud Storage: Qwik Start - CLI/SDK (GSP074) ===${RESET}"
 
 PROJECT_ID=$(gcloud config get-value project 2>/dev/null)
-REGION=${REGION:-$(gcloud config get-value compute/region 2>/dev/null)}
-[ -z "$REGION" ] && REGION="us-east1"
+if [ -z "$REGION" ]; then
+    DEFAULT_R=$(gcloud config get-value compute/region 2>/dev/null)
+    DEFAULT_R=${DEFAULT_R:-us-east1}
+    read -p "Enter Region (default: $DEFAULT_R): " input_r
+    REGION=${input_r:-$DEFAULT_R}
+fi
 
 echo "${YELLOW}Project ID:${RESET} $PROJECT_ID"
 echo "${YELLOW}Region:${RESET} $REGION"

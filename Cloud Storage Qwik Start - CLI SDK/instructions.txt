@@ -8,10 +8,12 @@ Run Instructions:
 
 1. Open Google Cloud Shell in your active lab session.
 
-2. Run the script:
+2. Run the script dynamically:
+
+   Method A - Interactive (Prompts for your lab's region, or press Enter for default):
    bash gsp074.sh
 
-   (Or specify your lab's assigned region):
+   Method B - Environment Variable (Pre-set region inline):
    REGION=us-east1 bash gsp074.sh
 
 3. The script will:
