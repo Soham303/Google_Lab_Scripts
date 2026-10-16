@@ -33,6 +33,7 @@ Lab Name/
 | 16 | [Working with Cloud Build](./Working%20with%20Cloud%20Build) | `gsp107.sh` | [instructions.txt](./Working%20with%20Cloud%20Build/instructions.txt) |
 | 17 | [Cloud SQL for MySQL: Qwik Start](./Cloud%20SQL%20for%20MySQL%20Qwik%20Start) | `gsp151.sh` | [instructions.txt](./Cloud%20SQL%20for%20MySQL%20Qwik%20Start/instructions.txt) |
 | 18 | [Internal Network Load Balancer](./Internal%20Network%20Load%20Balancer) | `ilb_lab_v1.sh` | [instructions.txt](./Internal%20Network%20Load%20Balancer/instructions.txt) |
+| 19 | [Build Infrastructure with Terraform on Google Cloud: Challenge Lab](./Build%20Infrastructure%20with%20Terraform%20on%20Google%20Cloud%20Challenge%20Lab) | `gsp345_v3.sh` | [instructions.txt](./Build%20Infrastructure%20with%20Terraform%20on%20Google%20Cloud%20Challenge%20Lab/instructions.txt) |
 
 ## General Usage Guide
 

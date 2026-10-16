@@ -1,0 +1,36 @@
+Lab Name: Build Infrastructure with Terraform on Google Cloud: Challenge Lab
+Lab Code: GSP345
+Script: gsp345_v3.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Upload `gsp345_v3.sh` to Google Cloud Shell (or paste into a file).
+
+2. Start a tmux session so the lab survives any network disconnects:
+   tmux new -s lab
+
+3. Run the script dynamically:
+
+   Method A - Interactive (Script prompts for your specific lab values):
+   bash gsp345_v3.sh 2>&1 | tee gsp.log
+
+   Method B - Environment Variables (Pre-set your lab's values inline):
+   BUCKET=tf-bucket-XXXXXX THIRD=tf-instance-XXXXXX VPC=tf-vpc-XXXXXX ZONE=europe-west4-c bash gsp345_v3.sh 2>&1 | tee gsp.log
+
+4. What to verify at the start of the output:
+   - Terraform version check: confirms the real Terraform v1.9.8 binary is installed.
+   - Settings line: verifies the region, zone, bucket, third instance, and VPC being used.
+   - Dynamic Zone Matching: if the pre-existing instances in your lab are in a different zone than specified, the script automatically adapts to match them.
+
+5. Checkpoints:
+   The script pauses after each task (Tasks 2 to 7):
+   - Switch to the lab page and click "Check my progress" for that task.
+   - Return to Cloud Shell and press Enter to continue to the next task.
+   (Note: To run without pauses, pass `AUTO=1 bash gsp345_v3.sh`).
+
+6. If Cloud Shell disconnects at any point, reopen it and run:
+   tmux attach -t lab
+
+7. When it prints "ALL DONE", ensure all checkmarks on your lab page are green and click "End Lab".
