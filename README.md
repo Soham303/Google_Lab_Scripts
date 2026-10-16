@@ -28,6 +28,7 @@ Lab Name/
 | 11 | [Managing Deployments Using Kubernetes Engine](./Managing%20Deployments%20Using%20Kubernetes%20Engine) | `gsp053.sh` | [instructions.txt](./Managing%20Deployments%20Using%20Kubernetes%20Engine/instructions.txt) |
 | 12 | [Automating the Deployment of Infrastructure Using Terraform](./Automating%20the%20Deployment%20of%20Infrastructure%20Using%20Terraform) | `gsp075.sh` | [instructions.txt](./Automating%20the%20Deployment%20of%20Infrastructure%20Using%20Terraform/instructions.txt) |
 | 13 | [Cloud Monitoring: Qwik Start](./Cloud%20Monitoring%20Qwik%20Start) | `gsp089.sh` | [instructions.txt](./Cloud%20Monitoring%20Qwik%20Start/instructions.txt) |
+| 14 | [Application Load Balancer with Cloud Armor](./Application%20Load%20Balancer%20with%20Cloud%20Armor) | `gsp215.sh` | [instructions.txt](./Application%20Load%20Balancer%20with%20Cloud%20Armor/instructions.txt) |
 
 ## General Usage Guide
 

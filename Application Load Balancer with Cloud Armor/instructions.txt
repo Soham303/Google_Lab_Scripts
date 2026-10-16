@@ -1,0 +1,33 @@
+Lab Name: Application Load Balancer with Cloud Armor
+Lab Code: GSP215
+Script: gsp215.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell in your active lab session.
+
+2. Start a tmux session:
+   tmux new -s lab
+
+3. Run the script:
+   bash gsp215.sh
+
+   (Or pass your lab's assigned regions and zone explicitly):
+   REGION1=us-central1 REGION2=europe-west1 VM_ZONE=us-central1-c bash gsp215.sh
+
+4. The script will:
+   - Configure HTTP and Health Check firewall rules
+   - Create instance templates across both regions
+   - Set up autoscaling Managed Instance Groups (MIGs)
+   - Provision an external Application Load Balancer
+   - Deploy `siege-vm`
+   - Configure a Cloud Armor security policy with a deny rule for `siege-vm`'s IP address
+   - Attach the security policy to the backend service
+   - Run siege verification from the VM
+
+5. If disconnected:
+   tmux attach -t lab
+
+6. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
