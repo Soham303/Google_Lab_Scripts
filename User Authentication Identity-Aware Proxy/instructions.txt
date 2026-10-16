@@ -1,0 +1,30 @@
+Lab Name: User Authentication: Identity-Aware Proxy
+Lab Code: GSP499
+Script: gsp499.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell from your active lab session.
+
+2. Start a tmux session:
+   tmux new -s lab
+
+3. Run the script:
+   bash gsp499.sh
+
+   (Or specify your lab's assigned region directly):
+   REGION=us-central bash gsp499.sh
+
+4. The script will:
+   - Enable IAP and App Engine APIs
+   - Download and extract the sample application package
+   - Initialize Google App Engine
+   - Sequentially deploy `1-HelloWorld`, `2-HelloUser`, and `3-HelloVerifiedUser`
+
+5. Once the script finishes, if requested by the lab checklist:
+   - Navigate to Google Cloud Console -> Security -> Identity-Aware Proxy
+   - Toggle the switch to enable IAP for the App Engine app
+
+6. Return to the lab page and click "Check my progress" for all tasks.

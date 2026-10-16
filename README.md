@@ -29,6 +29,7 @@ Lab Name/
 | 12 | [Automating the Deployment of Infrastructure Using Terraform](./Automating%20the%20Deployment%20of%20Infrastructure%20Using%20Terraform) | `gsp075.sh` | [instructions.txt](./Automating%20the%20Deployment%20of%20Infrastructure%20Using%20Terraform/instructions.txt) |
 | 13 | [Cloud Monitoring: Qwik Start](./Cloud%20Monitoring%20Qwik%20Start) | `gsp089.sh` | [instructions.txt](./Cloud%20Monitoring%20Qwik%20Start/instructions.txt) |
 | 14 | [Application Load Balancer with Cloud Armor](./Application%20Load%20Balancer%20with%20Cloud%20Armor) | `gsp215.sh` | [instructions.txt](./Application%20Load%20Balancer%20with%20Cloud%20Armor/instructions.txt) |
+| 15 | [User Authentication: Identity-Aware Proxy](./User%20Authentication%20Identity-Aware%20Proxy) | `gsp499.sh` | [instructions.txt](./User%20Authentication%20Identity-Aware%20Proxy/instructions.txt) |
 
 ## General Usage Guide
 
