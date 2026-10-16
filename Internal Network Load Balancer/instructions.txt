@@ -1,0 +1,41 @@
+Lab Name: Internal Network Load Balancer
+Script: ilb_lab_v1.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Upload `ilb_lab_v1.sh` to Google Cloud Shell (or paste it into a file).
+
+2. Start a tmux session so the lab survives any network disconnects:
+   tmux new -s lab
+
+3. Run the script:
+   bash ilb_lab_v1.sh 2>&1 | tee ilb.log
+
+   (Or override regions/zones if your lab assigns different ones):
+   REGION=us-east4 ZONE_UTIL=us-east4-a ZONE_IG1=us-east4-b ZONE_IG2=us-east4-c bash ilb_lab_v1.sh 2>&1 | tee ilb.log
+
+4. If Cloud Shell disconnects at any point, reopen it and run:
+   tmux attach -t lab
+
+5. When the terminal prints "ALL DONE", click "Check my progress" on Tasks 1, 2, 3, and 4, then click "End Lab".
+
+==================================================
+What the Script Does:
+==================================================
+
+- Task 1: Creates the two firewall rules (`fw-allow-lb-access` and `fw-allow-health-checks`).
+- Task 2: Creates the Cloud Router and NAT gateway (`nat-router-us-east4` and `nat-config`).
+- Task 3: Resets the existing `instance-group-1` and `instance-group-2` VMs once NAT is ready, re-running their startup scripts with external access available (no SSH required). Then creates `utility-vm` at `10.10.20.50` with no external IP.
+- Task 4: Creates the internal load balancer: regional health check, regional backend service `my-ilb`, adds both instance groups, reserves internal IP `10.10.30.5`, and sets up the forwarding rule `my-ilb-forwarding-rule`.
+- Task 5: `utility-vm` tests the load balancer via startup script. The script reads the responses from the VM's serial port output and prints the 10 load-balanced responses showing both backends serving traffic.
+
+==================================================
+Key Features:
+==================================================
+
+- Idempotent: Every step checks for existing resources before creating them, making it safe to re-run.
+- Retries: Automatically retries transient errors 3 times before stopping.
+- Zero SSH Dependency: Uses VM resets and serial port outputs, eliminating SSH key generation delays or connection dropouts.
+- Progress Output: Prints heartbeat updates every 30 seconds during long wait steps.
