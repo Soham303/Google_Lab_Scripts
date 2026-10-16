@@ -1,0 +1,25 @@
+Lab Name: Multiple VPC Networks
+Lab Code: GSP211
+Script: gsp211.sh
+
+==================================================
+Run Instructions:
+==================================================
+
+1. Open Google Cloud Shell in your active lab session.
+
+2. Run the script:
+   bash gsp211.sh
+
+   (Or supply Zone 1 and Zone 2 explicitly):
+   ZONE_1=us-east1-b ZONE_2=europe-west1-b bash gsp211.sh
+
+3. The script will:
+   - Identify or prompt for Zone 1 and Zone 2
+   - Create custom VPC networks: `managementnet` and `privatenet`
+   - Create subnets across the regions (`managementsubnet-1`, `privatesubnet-1`, `privatesubnet-2`)
+   - Configure ICMP, SSH, and RDP firewall rules
+   - Provision VMs (`managementnet-vm-1`, `privatenet-vm-1`)
+   - Provision multi-homed VM `vm-appliance` connected across all three networks (`privatenet`, `managementnet`, `mynetwork`)
+
+4. When the script prints "ALL DONE", return to the lab page and click "Check my progress" for all tasks.
